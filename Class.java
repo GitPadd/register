@@ -64,7 +64,7 @@ public class Class {
 		return this.classID;
 	}
 
-	public Student findStudent(String ID) { // Prüft ob Eindeutige ID aus
+	public Student findStudent(String ID) { // Prüft ob ID aus
 											// Register.txt mit der eines
 											// Schuelers übereinstimmt
 
@@ -86,10 +86,10 @@ public class Class {
 		}
 	}
 
-	public void listStudents() { // Listet alle Studenten einer Klasse auf
+	public void listStudents() throws NullPointerException { // Listet alle Studenten einer Klasse auf
 		for (int i = 1; i < students.size(); i++) {
 
-			System.out.println("Schüler: " + students.get(i).geteindeutigeID()
+			System.out.println("Schüler: " + students.get(i).getID()
 					+ " " + students.get(i).getName());
 
 		}
