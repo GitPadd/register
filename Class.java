@@ -10,6 +10,11 @@ public class Class {
 	public Class(String ID) {
 		classID = ID;
 	}
+	
+	public Class(Class c){
+		this.classID = c.classID;
+		this.students = c.students;
+	}
 
 	public void createClass(String pupilList) {
 		String allStudents[] = pupilList.substring(3).split(";");

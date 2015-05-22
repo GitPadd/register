@@ -44,7 +44,7 @@ public class StartRegister {
 		System.out.println(text);
 		Scanner s = new Scanner(System.in);
 
-		return s.next();
+		return s.nextLine();
 	}
 
 	public static void stageZero() {
@@ -62,7 +62,7 @@ public class StartRegister {
 		}
 
 		try {
-			tmpClass = k1.findClass(in);
+			tmpClass = new Class(k1.findClass(in));
 			System.out.println("Klasse: " + tmpClass.getID());
 
 		} catch (NullPointerException e) {
@@ -126,6 +126,7 @@ public class StartRegister {
 			if (in.equals("1")) {
 				try {
 					k1.writeEntries();
+				    System.exit(1);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

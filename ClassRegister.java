@@ -183,7 +183,8 @@ public class ClassRegister {
 		for(int i=0;i< theEntries.size();i++){
 			
 			//out.write(theEntries.get(i));
-			out.print(theEntries.get(i));
+			
+			out.println(theEntries.get(i));
 		}
 		out.close();
 
